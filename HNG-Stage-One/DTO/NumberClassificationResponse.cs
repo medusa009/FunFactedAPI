@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace HNG_Stage_One.DTO;
 
 public class NumberClassificationResponse
@@ -8,5 +10,7 @@ public class NumberClassificationResponse
     public List<string>? Properties { get; set; }
     public int? DigitSum { get; set; }
     public string? FunFact { get; set; }
-    public bool Error { get; set; } // Flag for error handling
+    
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool? Error { get; set; } // Flag for error handling
 }

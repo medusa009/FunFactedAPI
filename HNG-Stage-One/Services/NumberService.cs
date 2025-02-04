@@ -44,7 +44,7 @@ public class NumberService
                 Properties = properties,
                 DigitSum = GetDigitSum(num),
                 FunFact = funFact,
-                Error = false
+                Error = null
             };
         }
 
